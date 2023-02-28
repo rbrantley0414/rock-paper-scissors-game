@@ -1,0 +1,94 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Forum', Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(41, 105, 195);
+    color: white;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+.score {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.game {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.result {
+    text-align: center;
+    margin: 2em 42.7%;
+    text-transform: uppercase;
+}
+
+.reset {
+    /* width: 100%; */
+    /* display: flex;
+    justify-content: center; */
+    margin: 2em 42.7%;
+}
+
+button {
+    background-color: rgb(41, 105, 195);
+    border: 2px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(27, 66, 122);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.hands {
+    /* width: 100px;
+    height: 100px;
+    background-color: red; */
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: 3;
+}
+
+@keyframes bounce {
+    0% {
+        translate: 0px 0px;
+    }
+
+    50% {
+        translate: 0px -20px;
+    }
+
+    100% {
+        translate: 0px 0px;
+    }
+}
