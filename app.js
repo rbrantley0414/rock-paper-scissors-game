@@ -4,7 +4,7 @@ let userScore = 0;
 var compInput;
 var compPicture = document.querySelector(".compPic");
 let compScore = 0
-let hands = document.getElementsByTagName("img");
+let hands = document.querySelectorAll(".choice");
 var winner;
 var result = document.querySelector(".result");
 
@@ -20,7 +20,8 @@ const compOptions = [
 function userPick(el) {
     document.querySelector(".userPic").src = `media/Rock.svg`;
     document.querySelector(".compPic").src = `media/Rock1.svg`;
-    userInput = el.value;
+    // var dataSrc = event.target.getAttribute('data-modal-src');
+    userInput = el.getAttribute('value');
     console.log(userInput);
     //Get Computer Input
     function compPick() {
@@ -49,7 +50,8 @@ function userPick(el) {
     function init() {
         for (let i = 0; i < hands.length; i++) {
             hands[i].addEventListener('animationend', (ev) => {
-                document.querySelector(".result").innerHTML = `<p>${winner}</p>`;
+                // document.querySelector(".result").style.display = "flex";
+                document.querySelector(".result").innerHTML = `<p><strong>${winner}</strong></p>`;
                 document.querySelector(".userPic").src = `media/${userInput}.svg`;
                 document.querySelector(".compPic").src = `media/${compInput}1.svg`;
                 for (let i = 0; i < hands.length; i++) {
@@ -106,4 +108,5 @@ function reset() {
     document.querySelector(".compScore").innerHTML = compScore;
     document.querySelector(".userPic").src = `media/Rock.svg`;
     document.querySelector(".compPic").src = `media/Rock1.svg`;
+    document.querySelector(".result").innerHTML = "<p><strong>Let's Play!!</strong></p>";
 }
